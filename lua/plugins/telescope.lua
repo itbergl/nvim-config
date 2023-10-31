@@ -56,6 +56,7 @@ return {
 
 		keymap.set("n", "<leader>f;", require("telescope.builtin").resume, { desc = "Resume" })
 		keymap.set("n", "<leader>fb", require("telescope.builtin").builtin, { desc = "View Builtin Pickers" })
+		keymap.set("n", "<leader>fj", require("telescope.builtin").jumplist, { desc = "View Jumplist" })
 
 		local wk = require("which-key")
 

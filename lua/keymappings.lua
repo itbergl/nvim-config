@@ -11,9 +11,11 @@ set({ "v", "n" }, "<C-k>", "<C-w>k")
 set({ "v", "n" }, "<C-h>", "<C-w>h")
 set({ "v", "n" }, "<C-l>", "<C-w>l")
 
--- move <C-a> from tmux togglekey
-set({ "v", "n" }, "<C-i>", "<C-a>")
-set({ "v", "n" }, "g<C-i>", "g<C-a>")
+-- make room for <C-a> for tmux
+set({ "v", "n" }, "<S-x>", "<C-a>", { desc = "increment selection" } )
+set({ "v", "n" }, "g<S-x>", "g<C-a>", { desc = "increment selection (cumulative)" } )
+set({ "v", "n" }, "<C-x>", "<C-x>", { desc = "decrement selection" } )
+set({ "v", "n" }, "g<C-x>", "g<C-x>", { desc = "decrement selection (cumulative)" } )
 
 -- Navigate buffers
 set("n", "]w", ":bnext<CR>", { desc = "Next Buffer" })
@@ -36,11 +38,9 @@ set("n", "<ESC>", "<CMD>noh<CR>", { noremap = true, silent = true })
 -- jump to next character (useful for closing pairs)
 set("i", "<C-l>", "<C-o>a")
 
-set("n", "[q", "<CMD>cprev<CR>", { desc = "Previous Quickfix" })
 set("n", "]q", "<CMD>cnext<CR>", { desc = "Next Quickfix" })
+set("n", "[q", "<CMD>cprev<CR>", { desc = "Previous Quickfix" })
 
 set("n", "[c", "<CMD>colder<CR>", { desc = "quickfix older" })
-set("n", "<leader>c", function()
-	vim.cmd("copen")
-end, { desc = "copen" })
+set("n", "<leader>c", "<CMD>copen<CR>", { desc = "copen" })
 set("n", "]c", "<CMD>cnewer<CR>", { desc = "quickfix newer" })
