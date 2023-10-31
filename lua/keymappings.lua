@@ -39,12 +39,7 @@ set("i", "<C-l>", "<C-o>a")
 set("n", "[q", "<CMD>:cprev<CR>", { desc = "Previous Quickfix" })
 set("n", "]q", "<CMD>:cnext<CR>", { desc = "Next Quickfix" })
 
--- local sub = function()
--- 	vim.cmd(':call feedkeys(":%s/")')
--- end
---
--- set("n", "<leader>fs", sub, { desc = "find and replace" })
 
 set("n", "[c", "<CMD>colder<CR>", { desc = "quickfix older" })
+set("n", "<leader>c", function() vim.cmd("copen") end, { desc = "copen" })
 set("n", "]c", "<CMD>cnewer<CR>", { desc = "quickfix newer" })
-set("n", "<leader>c", vim.cmd("copen"), { desc = "copen" })

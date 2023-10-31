@@ -1,6 +1,8 @@
 return {
-	"junegunn/fzf",
-	dir = "~/.fzf",
-	build = "./install --all",
-    name = 'fzf',
+	-- -- "junegunn/fzf",
+ --    "junegunn/fzf.vim",
+ --    -- dir = "~/.fzf",
+ --    -- build = "./install --all",
+ -- --    name = 'fzf',
+ --    dependencies = { "junegunn/fzf" },
 }
