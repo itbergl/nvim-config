@@ -31,15 +31,16 @@ set("n", "<C-RIGHT>", ":vertical resize +2<CR>")
 
 -- moving line up/down
 -- clear last search on esc
-set("n", "<ESC>", "<ESC>:noh<CR>", { noremap = true, silent = true })
+set("n", "<ESC>", "<CMD>noh<CR>", { noremap = true, silent = true })
 
 -- jump to next character (useful for closing pairs)
 set("i", "<C-l>", "<C-o>a")
 
-set("n", "[q", "<CMD>:cprev<CR>", { desc = "Previous Quickfix" })
-set("n", "]q", "<CMD>:cnext<CR>", { desc = "Next Quickfix" })
-
+set("n", "[q", "<CMD>cprev<CR>", { desc = "Previous Quickfix" })
+set("n", "]q", "<CMD>cnext<CR>", { desc = "Next Quickfix" })
 
 set("n", "[c", "<CMD>colder<CR>", { desc = "quickfix older" })
-set("n", "<leader>c", function() vim.cmd("copen") end, { desc = "copen" })
+set("n", "<leader>c", function()
+	vim.cmd("copen")
+end, { desc = "copen" })
 set("n", "]c", "<CMD>cnewer<CR>", { desc = "quickfix newer" })
