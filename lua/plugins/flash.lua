@@ -1,6 +1,6 @@
 return {
 	"folke/flash.nvim",
-	event = "VeryLazy",
+	event = { "BufReadPre", "BufNewFile" },
 	config = function()
 		require("flash").setup({
 			modes = {

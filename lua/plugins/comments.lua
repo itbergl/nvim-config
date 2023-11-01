@@ -1,5 +1,6 @@
 return {
 	"numToStr/Comment.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	opts = {
 		mappings = {
 			---Operator-pending mapping; `gcc` `gbc` `gc[count]{motion}` `gb[count]{motion}`
@@ -17,5 +18,4 @@ return {
 			eol = "gcl",
 		},
 	},
-	lazy = false,
 }

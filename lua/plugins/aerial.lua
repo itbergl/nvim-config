@@ -1,6 +1,7 @@
 return {
 	"stevearc/aerial.nvim",
 	opts = {},
+	event = { "BufReadPre", "BufNewFile" },
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 		"nvim-tree/nvim-web-devicons",
