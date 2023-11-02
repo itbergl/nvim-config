@@ -7,7 +7,7 @@ return {
 		flash.setup({
 			modes = { char = { enabled = false } },
 		})
-        
+
         local modes = { "n", "x", "o" }
 
 		vim.keymap.set(modes, "s", function()

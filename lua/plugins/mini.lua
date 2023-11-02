@@ -18,15 +18,14 @@ return {
 	},
 	{
 		"echasnovski/mini.move",
-
 		event = { "BufReadPre", "BufNewFile" },
 		opts = {
 			mappings = {
 				-- Move visual selection in Visual mode. Defaults are Alt (Meta) + hjkl.
 				left = "gh",
-				right = "gl",
-				down = "gj",
-				up = "gk",
+                right = "gl",
+                down = "gj",
+                up = "gk",
 
 				-- Move current line in Normal mode
 				line_left = "gh",
@@ -39,7 +38,7 @@ return {
 	{
 		"windwp/nvim-autopairs",
 		event = "InsertEnter",
-		opts = {}, -- this is equalent to setup({}) function
+		opts = {},
 	},
 	{
 		"echasnovski/mini.bufremove",

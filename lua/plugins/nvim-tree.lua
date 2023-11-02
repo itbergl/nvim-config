@@ -61,10 +61,6 @@ return {
 
 		local wk = require("which-key")
 
-		wk.register({
-			e = {
-				name = "nvim-tree",
-			},
-		}, { prefix = "<leader>" })
+		wk.register({ e = { name = "nvim-tree" } }, { prefix = "<leader>" })
 	end,
 }
