@@ -21,17 +21,12 @@ set({ "v", "n" }, "g<C-x>", "g<C-x>", { desc = "decrement selection (cumulative)
 set("n", "]w", ":bnext<CR>", { desc = "Next Buffer" })
 set("n", "[w", ":bprevious<CR>", { desc = "Next Buffer" })
 
--- Move text up and down
-set("n", "gj", ":m .+1<CR>==", { silent = true, desc = "move text up" })
-set("n", "gk", ":m .-2<CR>==", { silent = true, desc = "move text down" })
-
 -- Resize with arrows
 set("n", "<C-DOWN>", ":resize -2<CR>")
 set("n", "<C-UP>", ":resize +2<CR>")
 set("n", "<C-LEFT>", ":vertical resize -2<CR>")
 set("n", "<C-RIGHT>", ":vertical resize +2<CR>")
 
--- moving line up/down
 -- clear last search on esc
 set("n", "<ESC>", "<CMD>noh<CR>", { noremap = true, silent = true })
 
