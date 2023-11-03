@@ -45,18 +45,18 @@ return {
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = "<A-k>",
-					node_incremental = "<A-k>",
-					scope_incremental = false,
-					node_decremental = "<A-j>",
-				},
-			},
-			-- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
-			context_commentstring = {
-				enable = true,
-				enable_autocmd = false,
-			},
-		})
-		vim.keymap.set("n", "<A-j>", "<nop>")
+					init_selection = "<A-l>",
+					node_incremental = "<A-l>",
+                    scope_incremental = false,
+                    node_decremental = "<A-h>",
+                },
+            },
+            -- enable nvim-ts-context-commentstring plugin for commenting tsx and jsx
+            context_commentstring = {
+                enable = true,
+                enable_autocmd = false,
+            },
+        })
+        vim.keymap.set("n", "<A-h>", "<nop>")
 	end,
 }

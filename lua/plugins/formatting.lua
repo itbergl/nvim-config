@@ -17,7 +17,7 @@ return {
 		})
 
 		vim.api.nvim_create_user_command("Format", 'lua require("conform").format()', {})
-		vim.keymap.set({ "n", "v" }, "<leader>F", function()
+		vim.keymap.set({ "n", "v" }, "<leader>=", function()
 			conform.format({
 				lsp_fallback = true,
 				async = false,
