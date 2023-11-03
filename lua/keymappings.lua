@@ -40,6 +40,6 @@ set("n", "]q", "<CMD>cnext<CR>", { desc = "Next Quickfix" })
 set("n", "[q", "<CMD>cprev<CR>", { desc = "Previous Quickfix" })
 
 -- jumping between quifix lists
-set("n", "[c", "<CMD>colder<CR>", { desc = "quickfix older" })
+set("n", "[Q", "<CMD>colder<CR>", { desc = "quickfix older" })
 set("n", "<leader>c", "<CMD>copen<CR>", { desc = "copen" })
-set("n", "]c", "<CMD>cnewer<CR>", { desc = "quickfix newer" })
+set("n", "]Q", "<CMD>cnewer<CR>", { desc = "quickfix newer" })
